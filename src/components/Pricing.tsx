@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export function Pricing() {
   const plans = [
@@ -76,9 +77,9 @@ export function Pricing() {
                   {plan.period && <span className="text-gray-500">{plan.period}</span>}
                 </div>
                 
-                <button className={`w-full py-4 rounded-xl font-medium mb-8 transition-colors ${plan.highlighted ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/10 text-white hover:bg-white/20'}`}>
+                <Link href="/get-started" className={`w-full block text-center py-4 rounded-xl font-medium mb-8 transition-colors ${plan.highlighted ? 'bg-white text-black hover:bg-gray-200' : 'bg-white/10 text-white hover:bg-white/20'}`}>
                   Get Started
-                </button>
+                </Link>
                 
                 <ul className="space-y-4">
                   {plan.features.map((feature, i) => (

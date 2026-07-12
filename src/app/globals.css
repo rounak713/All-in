@@ -80,3 +80,8 @@
     @apply font-heading tracking-tight;
   }
 }
+
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(720deg); opacity: 0; }
+}

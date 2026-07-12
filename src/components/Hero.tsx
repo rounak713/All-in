@@ -14,10 +14,10 @@ export function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between gap-16 relative z-10 max-w-7xl">
-        
+
         {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -25,20 +25,21 @@ export function Hero() {
           >
             Everything<br />
             About You.<br />
-            <span className="text-gray-400">One Tap.</span>
+            <span className="italic text-white/90">One</span>
+            <span className="italic text-[#E53935]">Tap.</span>
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-gray-400 mb-10 max-w-md font-light leading-relaxed"
           >
-            Share your complete professional identity instantly. 
+            Share your complete professional identity instantly.
             No paper. No searching. Just one tap.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -67,27 +68,27 @@ export function Hero() {
             className="relative w-[300px] h-[480px] lg:w-[360px] lg:h-[580px] rounded-3xl bg-gradient-to-br from-[#1a1a1a] to-black border border-white/10 shadow-2xl overflow-hidden cursor-pointer flex items-center justify-center group"
             style={{ transformStyle: "preserve-3d" }}
           >
-             {/* Card texture/shine */}
-             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-             
-             {/* NFC Icon / Logo representation */}
-             <div className="relative opacity-70 group-hover:opacity-100 transition-opacity duration-500 scale-150">
-                <Logo />
-             </div>
-             
-             {/* Tap indicator */}
-             <motion.div 
-               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-               transition={{ repeat: Infinity, duration: 2 }}
-               className="absolute bottom-12 flex flex-col items-center gap-2"
-             >
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-sm">
-                   <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-                     <div className="w-2 h-2 rounded-full bg-[#FF1A1A] animate-pulse" />
-                   </div>
+            {/* Card texture/shine */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+            {/* NFC Icon / Logo representation */}
+            <div className="relative opacity-70 group-hover:opacity-100 transition-opacity duration-500 scale-150">
+              <Logo />
+            </div>
+
+            {/* Tap indicator */}
+            <motion.div
+              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="absolute bottom-12 flex flex-col items-center gap-2"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-sm">
+                <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                  <div className="w-2 h-2 rounded-full bg-[#FF1A1A] animate-pulse" />
                 </div>
-                <span className="text-xs text-gray-500 uppercase tracking-widest">Tap</span>
-             </motion.div>
+              </div>
+              <span className="text-xs text-gray-500 uppercase tracking-widest">Tap</span>
+            </motion.div>
           </motion.div>
         </div>
       </div>
